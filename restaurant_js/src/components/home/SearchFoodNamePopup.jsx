@@ -24,7 +24,7 @@ const SearchFoodNamePopup = ({ setShowFoodNamePopup }) => {
         e.preventDefault();
         try {
             setLoading(true);
-            const { data : { restaurants } } = await axios(`http://localhost:5000/search_top_food?Food=${foodName}&resCity=${city}`);
+            const { data : { restaurants } } = await axios(`http://127.0.0.1:5000/search_top_food?Food=${foodName}&resCity=${city}`);
             setRestaurants(restaurants);
             localStorage.setItem('restaurants' , JSON.stringify(restaurants));
             setLoading(false);

@@ -10,7 +10,7 @@ const Hero = () => {
     useEffect(() => {
         const fetchInfo = async () => {
             try {
-                const { data } = await axios('http://localhost:5000/get_infodetails');
+                const { data } = await axios('http://127.0.0.1:5000/get_infodetails');
                 setInfo(prev => data);
             } catch (error) {
                 console.log('Fetch Info Error,' , error);

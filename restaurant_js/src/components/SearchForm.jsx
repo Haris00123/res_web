@@ -16,7 +16,7 @@ const SearchForm = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const { data : { restaurants } } = await axios.get(`http://68.183.192.124:8080/get_restaurants_names?resName=${resName}&resCity=${resCity}`);
+            const { data : { restaurants } } = await axios.get(`http://127.0.0.1:5000/get_restaurants_names?resName=${resName}&resCity=${resCity}`);
             setRestaurants(restaurants);
             localStorage.setItem('restaurants' , JSON.stringify(restaurants));
             setLoading(false); 

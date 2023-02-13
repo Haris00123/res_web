@@ -15,7 +15,7 @@ const ResTopFoods = () => {
         const fetchTopFoods = async () => {
             try {
                 setLoading(true);
-                const { data : { top_foods } } = await axios(`http://localhost:5000/get_top_foods?resId=${id}`);
+                const { data : { top_foods } } = await axios(`http://127.0.0.1:5000/get_top_foods?resId=${id}`);
                 setFoods(() => top_foods);
                 setLoading(false);
             } catch (error) {
