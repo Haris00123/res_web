@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+:root {
+  --primary : #ea1b25;
+  --secondary : #ffbe00;
+  --dark : #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s;
+  
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.btn-primary {
+  @apply bg-red-500 py-3 px-4 text-white hover:bg-black font-medium uppercase cursor-pointer rounded-md;
+}
+.nav-shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button {
+  background-color: none;
+  border: none;
+  outline: noen;
+  cursor: pointer;
+}
+
+
+/* ------------head section --------- */
+.head {
+  background-color: #000;
+  padding: 15px 0;
+  color: #fff;
+  display: flex;
+
+  text-transform: capitalize;
+}
+
+.head > div {
+  width: 90%;
+  margin: 0 auto;
+}
+  
+/* ------------head section --------- */
+
+/* ----------Home section -----------*/
+
+.home {
+  position: relative;
+  text-align: center;
+  background-image: url("/images/home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height : 100%;
+  
+  color: #fff;
+}
+.home .container {
+  max-width: 70%;
+  margin: auto;
+}
+.home h1 {
+  padding-top: 50px;
+  font-size: 60px;
+  line-height: 60px;
+  width: 80%;
+  margin: auto;
+  text-shadow: 0 5px 0 rgb(0 0 0 / 38%);
+}
+.home h1 span {
+  font-style: italic;
+  font-family: "Parisienne", cursive;
+}
+
+
+
+.home h2 {
+  font-size: 30px;
+}
+.home .text span {
+  opacity: 0.5;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("/images/clouds.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  background-image: url("/images/home2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+.home-icons{
+  display: flex;
+  gap : 2.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+.home-icons .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 10px;
+}
+.home-icons .box .img{
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-icons .box .img img {
+  width: 35px;
+  height : 35px;
+}
+.home-icons .box .text h2{
+  /* font-size: 22px; */
+}
+.home-icons .box .text span{
+  font-size: 14px;
+}
+
+.search-foodName{
+  margin-top: 1rem;
+}
+.search-foodName button {
+  background-color: var(--secondary) ;
+  padding : 12px 1.5rem;
+  border-radius: 5px;
+  transition : 0.2s all ease-in-out;
+  cursor: pointer;
+  position : relative;
+  color: black;
+  z-index: 999;
+}
+.search-foodName button:hover{
+  background-color: var(--primary);
+  color : white;
+}
+
+@media (max-width: 1050px){
+  .home h1{
+    width: 100%;
+  }
+  .home .container{
+    max-width: 85%;
+  }
+}
+@media (max-width: 850px){
+  /* .home .home-icons .box:nth-child(3){
+    display: none;
+  } */
+  .home {
+    padding-bottom: 8rem ;
+  }
+  .home .container{
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .home h1{
+    font-size: 45px;
+  }
+  .home form , .search-form{
+    padding: 20px 5px 20px 10px;;
+  }
+  .home::before{
+    width: 300px;
+  }
+}
+@media (max-width: 550px){
+  .home-icons{
+    gap: 2rem 1.5rem;
+  }
+  .home::before{
+    display: none;
+  }
+  .home-icons .box{
+    flex-direction: column;
+  }
+  .home-icons .box .img{
+    width: 65px;
+    height: 65px;
+  }
+  .home-icons .box .img img {
+    width: 30px;
+    height : 30px;
+  }
+  .home::after {
+    bottom: -5%;
+  }
+  input , .search-form input {
+    padding: 8px;
+  }
+  .home input , .search-form input {
+    width: 100%;
+    margin-right: 5px;
+    padding: 15px 13px;
+  }
+  .home input::placeholder, .search-form input::placeholder{
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 370px){
+  .home .container{
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  .home form , .search-form{
+    padding: 15px 2px 15px 5px;
+  }
+}
+
+/*-----------wrapper-------------*/
+
+.heading {
+  max-width: 70%;
+  margin-top: 10%;
+}
+.heading h3 {
+  font-size: 25px;
+  font-family: "Parisienne", cursive;
+  color: #ea1b25;
+  font-weight: normal;
+}
+.heading h1 {
+  font-size: 45px;
+}
+.heading p {
+  color: grey;
+  font-size: 15px;
+}
+
+@media (max-width: 850px){
+  .heading{
+    max-width: 100% !important;
+  }
+}
+
+
+@media (max-width: 550px){
+  .footer{
+    font-size: 12px;
+  }
+}

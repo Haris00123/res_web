@@ -1,0 +1,38 @@
+:root {
+    --primary : #ea1b25;
+    --secondary : #ffbe00;
+    --dark : #000;
+}
+
+.resTopFoods {
+    width: 100%;
+    min-height: 80vh;
+    height : 100%;
+    padding : 3rem;
+}
+.backBtn{
+    background: var(--primary);
+    border-radius: 5px ;
+    padding : 8px 1rem;
+    color : white;
+    display: flex;
+    align-items: center;
+    gap : 8px;
+    font-size: 14px;
+    transition: 0.2s all ease-in-out;
+    border : none;
+    outline : none;
+}
+.backBtn:hover {
+    background-color: var(--secondary);
+    color : black;
+}
+.backBtn i {
+    font-size: 18px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

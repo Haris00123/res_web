@@ -1,0 +1,101 @@
+.contact-section{
+    width: 100%; 
+    min-height : 80vh;
+    height: 100%;
+    padding: 0 4rem;
+    margin-top: 5rem;
+    background-image: url('https://i.pinimg.com/originals/bf/65/d5/bf65d51f34b1bf193ec947f3c0c3f3e0.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form-wrapper{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    height: 400px;
+    padding: 0 2rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap : 3rem;
+
+}
+.contact-content{
+    flex : 1;
+    margin-top: -1.5rem;
+}
+.contact-form{
+    flex : 1;
+}
+
+.heading-full {
+    width: 100%;
+}
+.heading-full h3 {
+    font-size: 25px;
+    font-family: "Parisienne", cursive;
+    color: #ea1b25;
+    font-weight: normal;
+}
+.heading-full h1 {
+    font-size: 35px;
+}
+.heading-full p {
+    color: grey;
+    font-size: 15px;
+}
+.contact-form{
+    width: 100%;
+}
+.contact-form > form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+.contact-form > form input ,.contact-form > form textarea{
+    width: 100%;
+    outline: none;
+    border:none;
+    border-radius: 20px;
+    padding: 12px 1rem;
+    transition: 0.3s all ease-in-out;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    resize: none;
+}
+.contact-form > form textarea{
+    height : 100px;
+    font-family: inherit;
+}
+.contact-form > form .input-div{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.contact-form > form input:focus ,.contact-form > form textarea:focus{
+    outline:1px solid #ffbe00;
+}
+
+@media (max-width: 850px){
+    .contact-section{
+        height : 100%;
+        padding : 4rem 1rem;
+    }
+    .contact-form-wrapper{
+        height : 100%;
+        flex-direction: column;
+        padding: 2rem ;
+    }
+}
+
+@media (max-width: 550px){
+    .contact-form > form .input-div{
+        flex-direction: column  ;
+    }
+    .contact-form-wrapper{
+        padding: 3rem 10px;
+    }
+}
